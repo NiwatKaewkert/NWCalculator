@@ -48,7 +48,7 @@ class ViewController: UIViewController {
 //        firstNum = Double(calDisplay.text!)!
 //        operation = sender.currentTitle!
 //        dot = false
-        if secondNum == 0.0 && firstOperation != 0 {
+        if secondNum == 0.0 && firstOperation != 0 && checkTyping {
             secondNum = Double(calDisplay.text!)!
             if dot {
                 var result = 0.0
@@ -99,11 +99,13 @@ class ViewController: UIViewController {
             print("Press Operation again")
             print(firstNum)
             print(secondNum)
+            operation = ""
         }
-        checkTyping = false
+        
         firstNum = Double(calDisplay.text!)!
         operation = sender.currentTitle!
         firstOperation += 1
+        checkTyping = false
     }
     
     @IBAction func eqaulTapped(_ sender: UIButton) {
@@ -157,6 +159,7 @@ class ViewController: UIViewController {
             
         }
         firstOperation = 0
+        operation = ""
     }
     
     @IBAction func btnClear(_ sender: UIButton) {
