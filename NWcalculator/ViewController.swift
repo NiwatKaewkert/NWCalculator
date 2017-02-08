@@ -96,9 +96,9 @@ class ViewController: UIViewController {
                 }
             }
             secondNum = 0.0
-            print("Press Operation again")
-            print(firstNum)
-            print(secondNum)
+//            print("Press Operation again")
+//            print(firstNum)
+//            print(secondNum)
             operation = ""
         }
         
