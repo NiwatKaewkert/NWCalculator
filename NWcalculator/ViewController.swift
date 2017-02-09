@@ -44,10 +44,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction func operationTapped(_ sender: UIButton) {
-//        checkTyping = false
-//        firstNum = Double(calDisplay.text!)!
-//        operation = sender.currentTitle!
-//        dot = false
+        //        checkTyping = false
+        //        firstNum = Double(calDisplay.text!)!
+        //        operation = sender.currentTitle!
+        //        dot = false
         if secondNum == 0.0 && firstOperation != 0 && checkTyping {
             secondNum = Double(calDisplay.text!)!
             if dot {
@@ -96,16 +96,18 @@ class ViewController: UIViewController {
                 }
             }
             secondNum = 0.0
-//            print("Press Operation again")
-//            print(firstNum)
-//            print(secondNum)
+            //            print("Press Operation again")
+            //            print(firstNum)
+            //            print(secondNum)
             operation = ""
+            
         }
         
         firstNum = Double(calDisplay.text!)!
         operation = sender.currentTitle!
         firstOperation += 1
         checkTyping = false
+        dot = false
     }
     
     @IBAction func eqaulTapped(_ sender: UIButton) {
@@ -182,7 +184,6 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     
 }
 
